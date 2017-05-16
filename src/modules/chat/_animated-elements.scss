@@ -1,0 +1,152 @@
+$chat-multiplier: .9;
+$chat-collapse-time: .4s;
+$chat-media-collapse-time: .5s;
+
+$chat-collapse-easing: cubic-bezier(.645, .045, .355, 1);
+// 1. cubic-bezier(.645, .045, .355, 1) - dynamic
+// 2. cubic-bezier(.445, .05, .55, .95) - smooth
+// 3. cubic-bezier(.455, .03, .515, .955) - smooth 2
+
+$chat-avatar-easing: cubic-bezier(.185, 1.045, .35, 1.37);
+$chat-text-easing: cubic-bezier(.455, .03, .515, .955);
+$chat-bubble-easing: cubic-bezier(.445, .05, .55, .95);
+
+// loading dots animation
+.chat-loading {
+  opacity: 0;
+  will-change: opacity;
+
+  .chat-msg-bubble--loading & {
+    animation: dots calc(#{$chat-multiplier} * .3s) forwards;
+    animation-delay:  calc(#{$chat-multiplier} * .1s);
+  }
+
+  &-dot {
+    will-change: transform;
+    animation: dotBounce calc(#{$chat-multiplier} * .3s) infinite ease-in-out alternate backwards;
+
+    &:nth-child(2) {
+      animation-delay: calc(#{$chat-multiplier} * .075s);
+    }
+
+    &:nth-child(3) {
+      animation-delay: calc(#{$chat-multiplier} * .15s);
+    }
+  }
+}
+
+// avatar animation
+.chat-msg-user {
+  max-height: 0;
+  will-change: max-height, padding;
+  margin-bottom: -4px;
+  padding: 0;
+  animation: avatarWrap calc(#{$chat-multiplier} * .2s) linear forwards;
+  overflow: hidden;
+}
+
+.chat-msg-avatar {
+  transform: scale(0);
+  // will-change: transform;
+  animation: avatar calc(#{$chat-multiplier} * .3s) $chat-avatar-easing forwards;
+  animation-delay: calc(#{$chat-multiplier} * .8s);
+}
+
+// media animation
+.chat-msg-media {
+  overflow: hidden;
+  will-change: max-height;
+
+  &--collapse {
+    max-height: 0;
+    animation: mediaCollapse calc(#{$chat-multiplier} * #{$chat-media-collapse-time}) $chat-collapse-easing forwards;
+  }
+
+  &-thumb {
+    opacity: 0;
+    will-change: opacity;
+
+    .chat-msg-media--loaded & {
+      animation: calc(#{$chat-multiplier} * .7s) thumbFadeIn forwards;
+    }
+  }
+
+  &-bubble-bg {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: 50% 0;
+    will-change: opacity, transform;
+
+    .chat-msg-media--loaded & {
+      animation: mediaBubbleLoaded calc(#{$chat-multiplier} * .3s) $chat-bubble-easing forwards;
+    }
+  }
+}
+
+.chat-msg-text {
+  opacity: 0;
+  will-change: opacity;
+
+  .chat-msg-media--loaded & {
+    animation: textLoaded calc(#{$chat-multiplier} * .4s) $chat-text-easing forwards;
+    animation-delay: calc(#{$chat-multiplier} * .4s);
+  }
+}
+
+// msg animation
+.chat-msg {
+  will-change: padding-bottom;
+  overflow: hidden;
+  // transition: calc(#{$chat-multiplier} * 1s) padding-bottom linear;
+  padding-bottom: 0;
+  animation: calc(#{$chat-multiplier} * #{$chat-collapse-time}) msg $chat-collapse-easing forwards;
+}
+
+// normal bubble animation
+.chat-msg-bubble {
+  will-change: height;
+
+  &--collapse {
+    &_first {
+      height: 48px;
+      animation: bubbleCollapse calc(#{$chat-multiplier} * #{$chat-collapse-time}) $chat-collapse-easing reverse forwards;
+    }
+  }
+}
+
+.chat-msg-bubble--collapse.chat-msg-bubble--collapse_second {
+  animation: bubbleCollapseSecond calc(#{$chat-multiplier} * #{$chat-collapse-time}) $chat-collapse-easing reverse;
+}
+
+.chat-msg-bubble--collapse.chat-msg-bubble--collapse_third {
+  animation: bubbleCollapse calc(#{$chat-multiplier} * #{$chat-collapse-time}) $chat-collapse-easing reverse;
+}
+
+.chat-msg-bubble-bg {
+  // will-change: opacity, margin, transform;
+  transform: scale(0);
+  opacity: 0;
+  margin: 0;
+
+  .chat-msg-bubble--loading & {
+    animation: bubble calc(#{$chat-multiplier} * .4s) $chat-bubble-easing forwards;
+  }
+
+  .chat-msg-bubble--loaded & {
+    animation: bubbleLoaded calc(#{$chat-multiplier} * .4s) $chat-bubble-easing forwards;
+  }
+
+  .chat-msg-bubble--collapse & {
+    visibility: hidden;
+  }
+}
+
+.chat-msg-text {
+  opacity: 0;
+  will-change: opacity;
+
+  .chat-msg-bubble--loaded & {
+    animation: textLoaded calc(#{$chat-multiplier} * .4s) $chat-text-easing forwards;
+    animation-delay: calc(#{$chat-multiplier} * .4s);
+  }
+}

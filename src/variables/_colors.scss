@@ -1,0 +1,24 @@
+$c-desire: #e63946;
+$c-honeydew: #f1faee;
+$c-lightblue: #a8dadc;
+$c-queenblue: #457b9d;
+$c-spacecadet: #1d3557;
+$c-white: #fff;
+
+$c-bg: $c-honeydew;
+$c-font: $c-spacecadet;
+$c-link: $c-desire;
+$c-link-hover: darken($c-desire, 10%);
+
+// msgs
+$c-error-bg: #ffbaba;
+$c-error-text: #d8000c;
+
+$c-warning-bg: #feefb3;
+$c-warning-text: #9f6000;
+
+$c-success-bg: #dff2bf;
+$c-success-text: #4f8a10;
+
+$c-info-bg: #bde5f8;
+$c-info-text: #00529b;

@@ -1,0 +1,16 @@
+@mixin ctf-style {
+  border: 1px solid $chat-textfield-border-color;
+  color: $chat-textfield-text-color;
+  background: $chat-textfield-background;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@mixin ctf-size {
+  font-size: $chat-textfield-font-size;
+  line-height: $chat-textfield-line-height;
+  padding: $tf-padding-vertical $chat-textfield-padding-horizontal;
+  display: block;
+  width: 100%;
+}

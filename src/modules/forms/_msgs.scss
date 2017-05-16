@@ -1,0 +1,40 @@
+.msg {
+  padding: $space-small;
+  font-size: $f-small;
+
+  .form-item & {
+    margin-top: $space-small;
+  }
+
+  &--error {
+    background: $c-error-bg;
+    color: $c-error-text;
+  }
+
+  &--warning {
+    background: $c-warning-bg;
+    color: $c-warning-text;
+  }
+
+  &--success {
+    background: $c-success-bg;
+    color: $c-success-text;
+  }
+
+  &--info {
+    background: $c-info-bg;
+    color: $c-info-text;
+  }
+}
+
+.msgs {
+  margin-bottom: $space-normal;
+
+  .msg {
+    margin-bottom: $space-small;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

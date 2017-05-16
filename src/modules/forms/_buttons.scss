@@ -1,0 +1,51 @@
+$button-height: 40px;
+$button-font-size: $f-normal;
+$button-line-height: 1.2;
+$button-padding-horizontal: $space-normal;
+
+@mixin button-style($bg-color, $text-color) {
+  background: $bg-color;
+  color: $text-color;
+  transition: .3s background, .3s color;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  &:not([disabled]) {
+    &:hover {
+      background: darken($bg-color, 10%);
+    }
+  }
+}
+
+@mixin button-size($height, $font-size, $line-height, $padding-horizontal) {
+  height: $height;
+  font-size: $font-size;
+  padding: calc((#{$height} - (#{$font-size} * #{$line-height}))/2) $padding-horizontal;
+}
+
+.button {
+  @include button-style($c-info-bg, $c-info-text);
+  @include button-size($button-height, $button-font-size, $button-line-height, $button-padding-horizontal);
+
+  &--success {
+    @include button-style($c-success-bg, $c-success-text);
+  }
+
+  &--warning {
+    @include button-style($c-warning-bg, $c-warning-text);
+  }
+
+  &--error {
+    @include button-style($c-error-bg, $c-error-text);
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &[disabled] {
+    opacity: .5;
+    cursor: default;
+  }
+}

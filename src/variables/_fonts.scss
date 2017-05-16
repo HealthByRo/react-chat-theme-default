@@ -1,0 +1,35 @@
+// Font Family
+$f-family: Verdana, Tahoma;
+
+// Font weights
+$fw-normal: 400;
+$fw-bold: 600;
+
+$fw-header: $fw-normal; // Header font weight
+
+// Line heights
+$f-lh: 1.2em;
+$f-lh--big: 1.4em;
+$f-lh--small: 1em;
+
+// Font Base
+$f-base: 16px;
+$f-base-lh: $f-lh;
+
+// h1 - huge
+$f-huge: 2em;
+
+// h2 - big
+$f-big: 1.5em;
+
+// h3 - medium
+$f-medium: 1.2em;
+
+// h4 - normal
+$f-normal: 1em;
+
+// h5 - small
+$f-small: .8em;
+
+// h6 - tiny
+$f-tiny: .6em;

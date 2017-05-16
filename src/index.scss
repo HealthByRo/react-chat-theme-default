@@ -1,0 +1,20 @@
+@import 'node_modules/normalize-scss/sass/normalize';
+@include normalize;
+
+// Variables
+@import
+'variables/fonts',
+'variables/colors',
+'variables/breakpoints',
+'variables/spacings';
+
+// Modules
+@import
+'modules/typography',
+'modules/spaces',
+'modules/icons',
+'modules/forms/structure',
+'modules/forms/buttons',
+'modules/forms/textfields',
+'modules/forms/msgs',
+'modules/chat/index';

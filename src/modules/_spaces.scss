@@ -1,0 +1,13 @@
+.space {
+  &-small {
+    height: $space-small;
+  }
+
+  &-normal {
+    height: $space-normal;
+  }
+
+  &-big {
+    height: $space-big;
+  }
+}

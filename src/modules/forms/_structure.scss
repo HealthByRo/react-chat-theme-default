@@ -1,0 +1,45 @@
+$form-item-spacing: $space-normal;
+$form-footer-spacing: $space-big;
+$form-footer-button-spacing: $space-small;
+$form-footer-text-size: $f-small;
+
+.form {
+  &-item {
+    margin: 0 0 $form-item-spacing;
+  }
+
+  &-footer {
+    margin-top: $form-footer-spacing;
+    display: flex;
+    margin: $form-footer-spacing -#{$form-footer-button-spacing} 0;
+
+    .button {
+      margin: 0 $form-footer-button-spacing;
+    }
+
+    &--align_center {
+      justify-content: center;
+    }
+
+    &--align_right {
+      justify-content: flex-end;
+    }
+  }
+
+  &-footer_text {
+    margin-top: $form-footer-spacing;
+    font-size: $form-footer-text-size;
+
+    &--align_center {
+      text-align: center;
+    }
+  }
+}
+
+.form-label {
+  text-transform: uppercase;
+  margin-bottom: $space-small;
+  display: block;
+  color: $c-queenblue;
+  font-size: $f-small;
+}

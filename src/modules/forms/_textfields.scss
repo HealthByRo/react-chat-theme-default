@@ -1,0 +1,42 @@
+$tf-border: $c-queenblue;
+$tf-bg: $c-white;
+$tf-height: 40px;
+$tf-font-size: $f-base;
+$tf-lh: 1.2;
+$tf-padding-horizontal: $space-normal;
+$tf-padding-vertical: calc((40px - (#{$tf-font-size} * #{$tf-lh}))/2);
+$tf-text-color: $c-queenblue;
+
+@mixin tf-style {
+  border: 1px solid $tf-border;
+  color: $tf-text-color;
+  background: $tf-bg;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@mixin tf-size {
+  font-size: $tf-font-size;
+  height: $tf-height;
+  line-height: $tf-lh;
+  padding: $tf-padding-vertical $tf-padding-horizontal;
+  display: block;
+  width: 100%;
+}
+
+.textfield {
+  @include tf-style;
+  @include tf-size;
+}
+
+.textarea {
+  @include tf-style;
+  @include tf-size;
+  height: auto;
+}
+
+.select {
+  @include tf-style;
+  @include tf-size;
+}

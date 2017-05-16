@@ -1,0 +1,60 @@
+$chat-bg: #f7f7f7;
+
+$chat-padding-vertical: 30px;
+$chat-padding-left: 20px;
+$chat-padding-right: 30px;
+
+$chat-text-font-size: 14px;
+$chat-text-line-height: 22px;
+$chat-text-color: #21303d;
+$chat-answer-text-color: #fff;
+
+$chat-bubble-bg: #caf0f8;
+$chat-answer-bubble-bg: #f05722;
+$chat-bubble-padding: 20px;
+$chat-bubble-spacing: 4px; // space between two bubbles in the same group
+$chat-bubble-radius: 15px;
+$chat-bubble-max-width: 60%; // max width of bubble (percent of avaiable space width)
+$chat-bubble-max-width-mobile: 80%; // max width of bubble (percent of avaiable space width)
+$chat-bubble-min-width: 60px; // max width of bubble (percent of avaiable space width)
+
+$chat-message-edit-size: 20px;
+$chat-message-edit-font-size: 10px;
+
+$chat-avatar-size: 28px;
+$chat-avatar-border-color: #dae1e3;
+$chat-avatar-background: #fff;
+$chat-avatar-spacing: 10px; // space between avatar and bubble
+$chat-avatar-letter-font-size: 14px;
+$chat-avatar-letter-color: #a6acb1;
+
+$chat-message-spacing: 30px; //space between messages
+
+$chat-footer-msg-border-color: #dae1e3;
+$chat-footer-msg-background: #edf2f3;
+$chat-footer-msg-padding-vertical: 6px;
+$chat-footer-msg-padding-horizontal: 10px;
+
+$chat-textfield-border-color: #dae1e3;
+$chat-textfield-background: #fff;
+$chat-textfield-text-color: #a6acb1;
+$chat-textfield-min-height: 46px;
+$chat-textfield-padding-horizontal: 10px;
+$chat-textfield-font-size: 14px;
+$chat-textfield-line-height: 17px;
+$chat-textfield-padding-vertical: calc((#{$chat-textfield-min-height} - (#{$chat-textfield-font-size} * #{$chat-textfield-line-height}))/2);
+
+$chat-send-padding: 15px;
+$chat-send-color: #f05722;
+$chat-send-font-size: 23px;
+
+$chat-loading-dot-size: 10px;
+$chat-loading-dot-color: darken(#caf0f8, 10%);
+$chat-loading-dot-space: 3px;
+
+$chat-media-padding-vertical: 10px;
+$chat-media-padding-horizontal: 15px;
+$chat-media-width: 255px;
+$chat-media-width-mobile: 153px;
+$chat-media-image-height: 155px;
+$chat-media-image-height-mobile: 93px;

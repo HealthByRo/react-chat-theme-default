@@ -1,3 +1,12 @@
+$tf-border: $c-queenblue;
+$tf-bg: $c-white;
+$tf-height: 40px;
+$tf-font-size: $f-base;
+$tf-lh: 1.2;
+$tf-padding-horizontal: $space-normal;
+$tf-padding-vertical: calc((40px - (#{$tf-font-size} * #{$tf-lh}))/2);
+$tf-text-color: $c-queenblue;
+
 $chat-bg: #f7f7f7;
 
 $chat-padding-vertical: 30px;

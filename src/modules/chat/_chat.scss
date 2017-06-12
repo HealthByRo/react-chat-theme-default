@@ -6,6 +6,7 @@
   font-family: 'canada-type-gibson';
   font-weight: 400;
   overflow: hidden;
+  background: $chat-bg;
 
   &-loading {
     margin: 0 -$chat-loading-dot-space;
@@ -23,12 +24,23 @@
   }
 
   &-window {
-    background: $chat-bg;
     overflow-y: scroll;
-    flex: 1;
     -webkit-overflow-scrolling: touch;
     will-change: scroll-position, contents;
     padding-top: 26px;
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    &-inner {
+      width: 720px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
 
     > div {
       &:last-of-type {

@@ -32,9 +32,6 @@
   }
 
   &-window {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    will-change: scroll-position, contents;
     padding-top: 26px;
 
     &-wrap {
@@ -42,6 +39,9 @@
       flex-direction: column;
       flex: 1;
       justify-content: flex-end;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position, contents;
     }
 
     &-inner {

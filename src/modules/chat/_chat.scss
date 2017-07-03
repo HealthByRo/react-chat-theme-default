@@ -7,6 +7,7 @@
   font-weight: 400;
   overflow: hidden;
   background: $chat-bg;
+  justify-content: flex-end;
 
   &-edit {
     display: none;
@@ -38,7 +39,6 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      justify-content: flex-end;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
       will-change: scroll-position, contents;

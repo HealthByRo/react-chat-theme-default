@@ -103,14 +103,10 @@
     overflow: hidden;
     padding-left: $chat-padding-left;
     padding-right: $chat-padding-right;
-    padding-top: 20px;
     position: relative;
 
     &-date {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      text-align: center;
     }
 
     &-timestamp {

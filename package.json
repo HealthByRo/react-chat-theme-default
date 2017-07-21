@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prerelease": "git checkout develop",
+    "release": "npm version",
+    "postrelease": "git push && git push --tags && git checkout master && git merge develop && git push && git checkout develop"
   },
   "repository": {
     "type": "git",

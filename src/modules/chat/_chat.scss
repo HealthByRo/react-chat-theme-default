@@ -186,10 +186,15 @@
       position: relative;
       overflow: hidden;
 
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
+      &-link {
+        align-self: flex-end;
+        order: 1;
+        flex-shrink: 0;
+
+        .chat-msg--answer &,
+        .static_chat-msg--answer & {
+          order: 2;
+        }
       }
 
       &-letter {
@@ -202,13 +207,10 @@
       }
 
       &-thumb {
-
-      }
-
-      &-img {
-        width: 100%;
-        height: auto;
-        display: block;
+        width: $chat-avatar-size;
+        height: $chat-avatar-size;
+        background: center no-repeat;
+        background-size: cover;
       }
     }
 

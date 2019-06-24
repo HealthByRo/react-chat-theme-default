@@ -8,11 +8,8 @@
     "release": "npm version",
     "postrelease": "git push && git push --tags && git checkout master && git merge develop && git push && git checkout develop"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/arabellatech/react-chat-theme-default.git"
-  },
+  "repository": "github:HealthByRo/react-chat-theme-default",
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/arabellatech/react-chat-theme-default#readme"
+  "homepage": "https://github.com/HealthByRo/react-chat-theme-default/"
 }
